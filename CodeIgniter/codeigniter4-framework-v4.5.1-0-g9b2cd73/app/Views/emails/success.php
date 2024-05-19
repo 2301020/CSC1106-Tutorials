@@ -1,0 +1,1 @@
+<p>Email successfully sent!</p>
