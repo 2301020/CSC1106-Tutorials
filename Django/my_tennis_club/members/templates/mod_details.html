@@ -1,16 +1,16 @@
 {% extends "master.html" %}
 
 {% block title %}
-  Details about {{ mymember.firstname }} {{ mymember.lastname }}
+  Details about {{ mymods.modname }} 
 {% endblock %}
 
 
 {% block content %}
-  <h1>{{ mymember.firstname }} {{ mymember.lastname }}</h1>
+  <h1>{{ mymods.modname }}</h1>
   
-  <p>Phone {{ mymember.phone }}</p>
-  <p>Member since: {{ mymember.joined_date }}</p>
+  <p>Taught By Prof. {{ mymods.taughtby }}</p>
+  <p>Credits: {{ mymods.credits }}</p>
   
-  <p>Back to <a href="/members">Members</a></p>
+  <p>Back to <a href="/mods">Mods</a></p>
   
 {% endblock %}

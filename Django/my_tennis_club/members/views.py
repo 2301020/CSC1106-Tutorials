@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.template import loader
-from .models import Member
+from .models import Member, Mods
 
 def members(request):
     mymembers = Member.objects.all().values()
@@ -15,6 +15,22 @@ def details(request, id):
     template = loader.get_template('details.html')
     context = {
         'mymember': mymember,
+    }
+    return HttpResponse(template.render(context, request))
+
+def mods(request):
+    mymods = Mods.objects.all().values()
+    template = loader.get_template('all_mods.html')
+    context = {
+        'mymods': mymods,
+    }
+    return HttpResponse(template.render(context, request))
+  
+def moddetails(request, id):
+    mymods = Mods.objects.get(id=id)
+    template = loader.get_template('mod_details.html')
+    context = {
+        'mymods': mymods,
     }
     return HttpResponse(template.render(context, request))
 

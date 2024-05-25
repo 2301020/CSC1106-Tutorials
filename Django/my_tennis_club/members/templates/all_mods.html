@@ -1,17 +1,17 @@
 {% extends "master.html" %}
 
 {% block title %}
-  My Tennis Club - List of all members
+  My Mods - List of all mods
 {% endblock %}
 
 
 {% block content %}
 
-  <h1>Members</h1>
+  <h1>Mods</h1>
   
   <ul>
-    {% for x in mymembers %}
-      <li><a href="details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a></li>
+    {% for x in mymods %}
+      <li><a href="details/{{ x.id }}">{{ x.modname }}, taught by: Prof. {{ x.taughtby }}</a></li>
     {% endfor %}
   </ul>
   <div class="mb-2"></div>
