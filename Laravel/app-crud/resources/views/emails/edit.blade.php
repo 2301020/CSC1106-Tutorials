@@ -23,23 +23,23 @@
         @csrf 
         @method('put')
         <div>
-            <label>Name</label>
+            <label>To</label>
             <input type="text" name="to" placeholder="To" value="{{$email->to}}" />
         </div>
         <div>
-            <label>Qty</label>
+            <label>Cc</label>
             <input type="text" name="cc" placeholder="Cc" value="{{$email->cc}}" />
         </div>
         <div>
-            <label>Price</label>
+            <label>Bcc</label>
             <input type="text" name="bcc" placeholder="Bcc" value="{{$email->bcc}}" />
         </div>
         <div>
-            <label>Description</label>
+            <label>Subject</label>
             <input type="text" name="subject" placeholder="Subject" value="{{$email->subject}}" />
         </div>
         <div>
-            <label>Description</label>
+            <label>Message</label>
             <input type="text" name="message" placeholder="Message" value="{{$email->message}}" />
         </div>
         <div>
