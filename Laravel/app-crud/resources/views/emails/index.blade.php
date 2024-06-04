@@ -26,8 +26,9 @@
                 <th>Cc</th>
                 <th>Bcc</th>
                 <th>Subject</th>
-                <th>Message</th>
-                <th>Edit</th>
+                <!-- <th>Message</th> -->
+                <!-- <th>Edit</th> -->
+                <th>View Messsage</th>
                 <th>Delete</th>
             </tr>
             @foreach($emails as $email )
@@ -37,9 +38,10 @@
                     <td>{{$email->cc}}</td>
                     <td>{{$email->bcc}}</td>
                     <td>{{$email->subject}}</td>
-                    <td>{{$email->message}}</td>
+                    <!-- <td>{{$email->message}}</td> -->
                     <td>
-                        <a href="{{route('email.edit', ['email' => $email])}}">Edit</a>
+                        <!-- <a href="{{route('email.edit', ['email' => $email])}}">Edit</a> -->
+                        <a href="{{route('email.view', ['email' => $email])}}">Read Email</a>
                     </td>
                     <td>
                         <form method="post" action="{{route('email.destroy', ['email' => $email])}}">

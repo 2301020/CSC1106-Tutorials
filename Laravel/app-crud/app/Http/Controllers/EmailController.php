@@ -37,6 +37,10 @@ class EmailController extends Controller
         return view('emails.edit', ['email' => $email]);
     }
 
+    public function view(Email $email){
+        return view('emails.view', ['email' => $email]);
+    }
+
     public function update(Email $email, Request $request){
         $data = $request->validate([
             'to' => 'required',
