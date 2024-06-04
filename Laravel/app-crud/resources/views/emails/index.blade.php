@@ -7,8 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Product</h1>
-    <!-- <div>
+    <h1>Emails</h1>
+    <div>
         @if(session()->has('success'))
             <div>
                 {{session('success')}}
@@ -17,30 +17,32 @@
     </div>
     <div>
         <div>
-            <a href="{{route('product.create')}}">Create a Product</a>
+            <a href="{{route('email.create')}}">Create an Email</a>
         </div>
         <table border="1">
             <tr>
                 <th>ID</th>
-                <th>Name</th>
-                <th>Qty</th>
-                <th>Price</th>
-                <th>Description</th>
+                <th>To</th>
+                <th>Cc</th>
+                <th>Bcc</th>
+                <th>Subject</th>
+                <th>Message</th>
                 <th>Edit</th>
                 <th>Delete</th>
             </tr>
-            @foreach($products as $product )
+            @foreach($emails as $email )
                 <tr>
-                    <td>{{$product->id}}</td>
-                    <td>{{$product->name}}</td>
-                    <td>{{$product->qty}}</td>
-                    <td>{{$product->price}}</td>
-                    <td>{{$product->description}}</td>
+                    <td>{{$email->id}}</td>
+                    <td>{{$email->to}}</td>
+                    <td>{{$email->cc}}</td>
+                    <td>{{$email->bcc}}</td>
+                    <td>{{$email->subject}}</td>
+                    <td>{{$email->message}}</td>
                     <td>
-                        <a href="{{route('product.edit', ['product' => $product])}}">Edit</a>
+                        <a href="{{route('email.edit', ['email' => $email])}}">Edit</a>
                     </td>
                     <td>
-                        <form method="post" action="{{route('product.destroy', ['product' => $product])}}">
+                        <form method="post" action="{{route('email.destroy', ['email' => $email])}}">
                             @csrf 
                             @method('delete')
                             <input type="submit" value="Delete" />
@@ -49,6 +51,6 @@
                 </tr>
             @endforeach
         </table>
-    </div> -->
+    </div>
 </body>
 </html>
