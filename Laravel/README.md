@@ -10,3 +10,9 @@
 
 ## Step 2: Run Application
 ```php artisan serve```
+
+## Useful Laravel Commands (replace the word 'character' with whatever you need)
+Database initialization (usually have to mess with .env file first): ``` php artisan migrate ```
+Create database migrate thing (found in database/migrations): ``` php artisan make:migration create_characters_table ```
+Create database model (found in database/migrations): ``` php artisan make:model character ```
+Create controller (found in database/migrations): ``` php artisan make:controller CharacterController ```
