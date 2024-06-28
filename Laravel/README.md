@@ -12,6 +12,8 @@
 ```php artisan serve```
 
 ## Useful Laravel Commands (replace the word 'character' with whatever you need)
+Project creation: ``` composer create-project laravel/laravel character ```
+Bootstrap 'importing': ``` cd prep-test ```, ``` composer require laravel/ui ```, ``` php artisan bootstrap ```, ``` npm install boostrap-icons --save-dev```, ``` npm run build ```, ``` composer require livewire/livewire ```
 Database initialization (usually have to mess with .env file first): ``` php artisan migrate ```
 Create database migrate thing (found in database/migrations): ``` php artisan make:migration create_characters_table ```
 Create database model (found in database/migrations): ``` php artisan make:model character ```
