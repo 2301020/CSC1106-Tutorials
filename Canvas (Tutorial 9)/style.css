@@ -1,0 +1,15 @@
+#my-canvas {
+    border: 5px solid black;
+    border-radius: 4%;
+}
+
+body {
+    margin: auto;
+    width: 75%;
+    text-align: center;
+}
+
+#signature-img {
+    margin: auto;
+    text-align: center;
+}
